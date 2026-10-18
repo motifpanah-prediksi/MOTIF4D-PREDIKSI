@@ -2072,7 +2072,7 @@ async function fetchAllMatches() {
   return [...unique.values()]
     .filter(match => {
       const kickoff = new Date(match.date).getTime();
-      return now < kickoff + ONE_DAY;
+      return now < kickoff + TWO_DAYS;
     })
     .sort((a, b) => new Date(a.date) - new Date(b.date));
 }
