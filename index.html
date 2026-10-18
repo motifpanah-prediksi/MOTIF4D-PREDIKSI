@@ -2857,6 +2857,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+/* ==========================================
+   PANAH4D - AUTO SLIDE FEATURED MATCH
+   Ganti banner setiap 5 detik
+========================================== */
+
+if (window.heroAutoSlideTimer) {
+  clearInterval(window.heroAutoSlideTimer);
+}
+
+window.heroAutoSlideTimer = setInterval(() => {
+  if (document.hidden) return;
+  if (typeof games === "undefined" || games.length <= 1) return;
+
+  slideIndex = (slideIndex + 1) % games.length;
+  renderHero();
+}, 10000);
+
   
   </script>
 <!-- Begin of Chaport Live Chat code -->
